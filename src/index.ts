@@ -16,7 +16,7 @@ async function insertUser(email:string,password:string,firstName:string,lastName
     console.log(response)
 };
 
-//insertUser("akshat1@gmail.com","coolCoder","akshat","dhoundiyal");
+insertUser("avnish@gmail.com","ok","avnish","dhoundiyal");
 
 interface UpdatePrams{
     firstName?:string;
@@ -40,4 +40,13 @@ async function updateUsers(email:string,updateParamas:UpdatePrams) {
     console.log(result);
 }
 
-updateUsers("akshat1@gmail.com",updateParamas);
+//updateUsers("akshat1@gmail.com",updateParamas);
+
+
+//get users details
+const getUsers = async()=>{
+    const result = await prisma.users.findMany();
+    console.log(result);
+}
+
+getUsers();
