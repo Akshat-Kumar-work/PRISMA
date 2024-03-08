@@ -14,7 +14,7 @@ datasource db {
 }
 
 //creating user table 
-model User{
+model Users{
   id Int @id @default(autoincrement())
   email String @unique
   password String
